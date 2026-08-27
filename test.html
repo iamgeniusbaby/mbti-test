@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>공부 습관 자가진단 — MBTI 공부법 연구소</title>
+<meta name="description" content="공부 습관 10문항으로 내 기질 그룹(NT·NF·SJ·SP)을 판정하고 맞춤 공부법을 확인하세요." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">MBTI 공부법 연구소</a>
+    <a href="index.html">홈</a>
+    <a href="nt.html">NT</a>
+    <a href="nf.html">NF</a>
+    <a href="sj.html">SJ</a>
+    <a href="sp.html">SP</a>
+    <a href="test.html" class="active">자가진단</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="tag">10문항 · 약 2분</span>
+    <h1>내 공부 유형 찾기</h1>
+    <p>
+      공부할 때의 나를 떠올리며 한 문항에 하나씩 골라 주세요. 보기마다
+      네 기질(NT·NF·SJ·SP)에 점수가 매겨지고, 합산해 가장 높은 그룹을
+      결과로 보여드립니다.
+    </p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <form id="quiz"><!-- 문항은 test.js가 생성 --></form>
+    <div class="btn-row">
+      <button type="button" id="submit" class="btn">결과 보기</button>
+      <a href="index.html" class="btn ghost">홈으로</a>
+    </div>
+    <p class="notice">
+      입력한 답은 브라우저 안에서만 계산되며, 어디에도 저장·전송되지 않습니다.
+    </p>
+  </section>
+
+  <section id="result">
+    <h2>자가진단 결과</h2>
+    <div class="panel">
+      <div class="result-badge" id="r-badge">—</div>
+      <p id="r-desc" style="margin-top:10px"></p>
+      <div class="score-row" id="r-scores"></div>
+      <p class="notice" id="r-note"></p>
+      <div class="btn-row">
+        <a class="btn" id="r-go" href="index.html">그룹 공부법 보러 가기</a>
+        <button type="button" class="btn ghost" id="r-share">친구에게 공유</button>
+      </div>
+    </div>
+    <p class="notice">
+      결과가 애매하게 느껴지면, 동점·차점 그룹 페이지도 함께 읽어보세요.
+      성향은 스펙트럼이라 두 그룹의 조언이 모두 맞을 수 있습니다.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="index.html">홈</a>
+      <a href="nt.html">NT</a>
+      <a href="nf.html">NF</a>
+      <a href="sj.html">SJ</a>
+      <a href="sp.html">SP</a>
+      <a href="test.html">자가진단</a>
+    </div>
+    <p>MBTI 공부법 연구소 · 성격 유형은 참고용이며, 실제 공부법은 직접 실험해 보며 조정하세요.</p>
+  </div>
+</footer>
+
+<script src="test.js"></script>
+</body>
+</html>
