@@ -6,6 +6,15 @@
 <title>공부 습관 자가진단 — MBTI 공부법 연구소</title>
 <meta name="description" content="공부 습관 10문항으로 내 기질 그룹(NT·NF·SJ·SP)을 판정하고 맞춤 공부법을 확인하세요." />
 <link rel="stylesheet" href="style.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "dark" || t === "light")
+        document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
 </head>
 <body>
 
@@ -81,5 +90,6 @@
 </footer>
 
 <script src="test.js"></script>
+<script src="theme.js"></script>
 </body>
 </html>

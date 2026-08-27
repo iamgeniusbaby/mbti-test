@@ -6,6 +6,15 @@
 <title>MBTI 공부법 연구소 — 기질별 공부 전략</title>
 <meta name="description" content="NT·NF·SJ·SP 네 가지 기질 그룹별 공부법과 시험 전략, 10문항 자가진단으로 내 공부 유형 찾기." />
 <link rel="stylesheet" href="style.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "dark" || t === "light")
+        document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
 </head>
 <body>
 
@@ -140,5 +149,6 @@
   </div>
 </footer>
 
+<script src="theme.js"></script>
 </body>
 </html>
