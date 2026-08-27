@@ -13,6 +13,12 @@ MBTI 공부법 연구소 — 여러 개의 HTML 페이지로 구성된 정적 �
 ## 디자인 시스템
 
 - 크림색 배경 + 보라색 포인트 컬러 + Pretendard(가변 폰트), 모바일 우선 반응형
+- **레이아웃 언어(Intel 코리아 홈 참고)**: 브랜드 색(크림·보라)은 유지하되 구조는
+  플랫하게 간다 — 그림자 최소(`--shadow`는 1px 힌트 수준) · 모서리 반경 작게
+  (`--radius` 6px, 알약형 금지, 버튼·칩·뱃지 4~6px) · 큰 볼드 헤드라인
+  (h1 2.6rem/800, h2 1.85rem/800) · `section`은 48px 세로 여백 + `section + section`
+  1px 헤어라인으로 구분 · 히어로 하단 1px 경계 · 카드는 `flex` 컬럼으로 높이 균일화
+  (`.types`는 `margin-top:auto`로 하단 고정) · `.tip`은 좌측 3px 액센트 바.
 - 색은 모두 `style.css`의 CSS 커스텀 프로퍼티로 관리한다. 하드코딩 색상 대신 토큰
   (`--cream`, `--card`, `--purple`, `--purple-deep`, `--purple-soft`, `--ink`,
   `--ink-soft`, `--line`, `--shadow`, `--nav-bg`, `--btn-fg` 등)을 사용한다.
