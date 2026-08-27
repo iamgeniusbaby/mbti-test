@@ -90,9 +90,12 @@ var QUESTIONS = [
   QUESTIONS.forEach(function (item, qi) {
     var box = document.createElement("div");
     box.className = "q";
+    box.setAttribute("role", "radiogroup");
+    box.setAttribute("aria-labelledby", "qhead-" + qi);
 
     var head = document.createElement("div");
     head.className = "qhead";
+    head.id = "qhead-" + qi;
     head.textContent = (qi + 1) + ". " + item.q;
     box.appendChild(head);
 
@@ -149,7 +152,7 @@ var QUESTIONS = [
     var note = document.getElementById("r-note");
     if (tie.length > 1) {
       note.textContent = "동점 그룹: " + tie.join(", ") +
-        " — 두 그룹 페이지를 모두 참고하면 좋아요. (여기서는 " + best + " 기준으로 안내합니다.)";
+        " — 해당 그룹 페이지를 모두 참고하면 좋아요. (여기서는 " + best + " 기준으로 안내합니다.)";
     } else {
       note.textContent = "";
     }
