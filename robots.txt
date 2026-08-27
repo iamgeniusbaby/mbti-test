@@ -37,4 +37,4 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
-Sitemap: https://mbti-test.vercel.app/sitemap.xml
+Sitemap: https://mbti-test-bay.vercel.app/sitemap.xml
