@@ -84,7 +84,10 @@ a { color: var(--purple-deep); text-decoration: none; }
 a:hover { text-decoration: underline; }
 input[type="radio"] { accent-color: var(--purple); }
 
-:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; border-radius: 6px; }
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+}
 
 .wrap { width: 100%; max-width: 860px; margin: 0 auto; padding: 0 20px; }
 
