@@ -133,6 +133,15 @@ var QUESTIONS = [
     var tie = order.filter(function (g) { return scores[g] === scores[best]; });
 
     renderResult(best, scores, tie, order);
+
+    // GA4: 자가진단 완료 이벤트 — 결과 그룹 전송
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "test_complete", {
+        result_group: best,               // "NT" | "NF" | "SJ" | "SP"
+        is_tie: tie.length > 1,
+        tie_groups: tie.join("+")         // 예: "NT+SP" (동점 아니면 best와 동일)
+      });
+    }
   });
 
   function renderResult(best, scores, tie, order) {
